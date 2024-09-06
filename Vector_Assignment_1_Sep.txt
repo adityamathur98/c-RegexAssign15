@@ -1,0 +1,506 @@
+Q1. Create a vector of integers with 10 elements, all initialized to 0.
+
+Ans. #include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    vector<int> myVector(10);
+    for (auto it : myVector)
+    {
+        cout << it << " ";
+    }
+    return 0;
+}
+
+Q2. Create a vector of strings with 5 elements, each initialized to "empty.".
+
+Ans. #include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    vector<string> myVector(5, "empty");
+    for (auto it : myVector)
+    {
+        cout << it << " ";
+    }
+    return 0;
+}
+
+Q3. Initialize a vector with the values {1, 2, 3, 4, 5}.
+
+Ans.#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    vector<int> myVector{1, 2, 3, 4, 5};
+    for (auto it : myVector)
+    {
+        cout << it << " ";
+    }
+    return 0;
+}
+
+Q4. Create a vector of floating-point numbers and fill it with 10 values entered by the user.
+
+Ans. #include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    vector<float> myVector(10);
+    int n;
+
+    for (int i = 0; i < myVector.size(); i++)
+    {
+        cout << "Enter value for " << i + 1 << " index: ";
+        cin >> n;
+        myVector[i] = n;
+    }
+
+    // Loop to print value of Vector
+    for (auto it : myVector)
+    {
+        cout << it << " ";
+    }
+    return 0;
+}
+
+Q5. Print all elements of a vector of integers.
+
+Ans. #include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    vector<float> myVector(10);
+    int n;
+
+    for (int i = 0; i < myVector.size(); i++)
+    {
+        cout << "Enter value for " << i + 1 << " index: ";
+        cin >> n;
+        myVector[i] = n;
+    }
+
+    // Loop to print value of Vector
+    for (auto it : myVector)
+    {
+        cout << it << " ";
+    }
+    return 0;
+}
+
+Q6. Find the size of a vector of doubles and display it.
+
+Ans.#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    vector<double> myVector;
+    int sizeOfVector = myVector.size();
+    cout << sizeOfVector;
+    return 0;
+}
+
+Q7. Check if a vector of integers is empty and print the result.
+
+Ans.#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    vector<int> myVector;
+    bool isVectorEmpty = myVector.empty();
+
+    if (isVectorEmpty)
+    {
+        cout << "Vector Has No Value Yet.";
+    }
+    else
+    {
+        cout << "Vector Has " << myVector.size() << " values.";
+    }
+    return 0;
+}
+
+Q8. Add an element to the end of a vector of strings and print the updated vector.
+
+Ans.#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    vector<string> myVector{"Adi", "Manav"};
+    myVector.push_back("Harsh");
+
+    for (auto it : myVector)
+        cout << it << " ";
+    return 0;
+}
+
+Q9. Remove the last element from a vector of integers and print the vector.
+
+Ans.#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    vector<string> myVector{"Adi", "Manav"};
+    myVector.pop_back();
+
+    for (auto it : myVector)
+        cout << it << " ";
+    return 0;
+}
+
+Q10. Clear all elements from a vector of characters and check if it is empty.
+
+Ans.#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    vector<char> myVector{'A', 'M', 'D'};
+
+    while (!myVector.empty())
+    {
+        myVector.pop_back();
+    }
+
+    if (myVector.size() == 0)
+    {
+        cout << "Vector has No Value.";
+    }
+    else
+    {
+        cout << "Vector has Some Values.";
+    }
+
+    return 0;
+}
+
+Q11. Initialize a vector of integers with values from 10 to 19.
+
+Ans.#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int startValue = 10, endValue = 19;
+    vector<int> myVector(endValue - startValue + 1);
+
+    for (int i = 0; i < myVector.size(); i++)
+    {
+        myVector[i] = startValue + i;
+    }
+
+    for (auto it : myVector)
+    {
+        cout << it << " ";
+    }
+
+    return 0;
+}
+
+Q12. Create a vector of vectors (2D vector) and initialize it with 3 rows and 4 columns of zeros.
+
+Ans.#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int row = 3, col = 4;
+    vector<vector<int>> myVector(row, vector<int>(col, 0));
+
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < col; j++)
+        {
+            myVector[i][j] = 0;
+        }
+    }
+
+    //Print Element using for loop
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < col; j++)
+        {
+            cout << myVector[i][j] << " ";
+        }
+        cout << "\n";
+    }
+
+    //Using Value Iterate Loop to print elements of vector
+    // for (auto row : myVector)
+    // {
+    //     for (int val : row)
+    //     {
+    //         cout << val << " ";
+    //     }
+    //     cout << "\n";
+    // }
+
+    return 0;
+}
+
+Q13. Copy all elements from one vector of floats to another vector.
+
+Ans.  #include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    // Copy all elements from one vector of floats to another vector.
+    vector<float> vector1{1.5, 2.5, 6.5};
+    vector<float> vector2;
+
+    vector2.assign(vector1.begin(), vector1.end());
+
+    for (auto it : vector2)
+        cout << it << " ";
+}
+
+Q14. Use the assign function to set a vector of integers to 10 elements, all initialized to 7.
+
+Ans. #include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    vector<int> myVector;
+
+    myVector.assign(10, 7);
+
+    for (auto it : myVector)
+        cout << it << " ";
+    return 0;
+}
+
+Q15. Create a vector and use push_back to add 5 elements to it. Then, use pop_back to remove 2 elements.
+    
+Ans. #include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    vector<int> myVector;
+
+    myVector.push_back(1);
+    myVector.push_back(3);
+    myVector.push_back(8);
+    myVector.push_back(6);
+    myVector.push_back(15);
+
+    myVector.pop_back();
+    myVector.pop_back();
+
+    for (auto it : myVector)
+        cout << it << " ";
+
+    return 0;
+}
+
+Q16. Access and print the third element of a vector of strings.
+
+Ans. #include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    vector<string> myector{"Diya", "Manoj", "Astha"};
+
+    string thirdEle = myector.at(3 - 1);
+
+    cout << "Third Element of Vector is " << thirdEle;
+    return 0;
+}
+
+Q17. Modify the value of the fifth element in a vector of integers.
+
+Ans.#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    vector<int> myVector{1, 2, 3, 4, 5};
+
+    cout << "Before Modify Vector \n";
+
+    for (auto it : myVector)
+        cout << it << " ";
+
+    cout << endl;
+
+    //Use at() function to change or modify value 
+    myVector.at(5 - 1) = 6;
+
+    cout << "After Modify Vector \n";
+
+    for (auto it : myVector)
+        cout << it << " ";
+
+    return 0;
+}
+
+Q18. Use the at method to safely access the 7th element of a vector of doubles.
+
+Ans.#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    vector<double> myVector{1.259, 2.589, 5.478, 9.568, 48.598, 57.265, 72.154, 99.548};
+
+    cout << myVector.at(7 - 1);
+    return 0;
+}
+
+Q19. Check if a vector contains a specific value using the find function.
+
+Ans. #include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    vector<int> myVector{1, 6, 9, 5, 7};
+
+    int value = 5;
+
+    auto it = find(myVector.begin(), myVector.end(), value);
+
+    if (it != myVector.end())
+    {
+        int index = distance(myVector.begin(), it);
+        cout << "The " << value << " has found at index " << index;
+    }
+    else
+    {
+        cout << "The " << value << " is not found.";
+    }
+
+    return 0;
+}
+
+Q20. Use a loop to iterate over and print all elements of a vector of integers.
+
+Ans. #include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    vector<int> myVector{1, 2, 3, 8, 9};
+
+    for (auto it : myVector)
+        cout << it << " ";
+
+    return 0;
+}
+
+Q21. identify the capacity of a vector of integers and print it.
+
+Ans. #include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    vector<int> myVector{1, 2, 3, 8, 9};
+    myVector.push_back(89);
+
+    int capacityOfVector = myVector.capacity();
+
+    cout << "The Capacity of My Vector is " << capacityOfVector;
+
+    return 0;
+}
+
+Q22. Shrink the vector to fit its current size and print the new capacity.
+
+Ans. #include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    vector<int> myVector{1, 2, 3, 8, 9};
+
+    myVector.push_back(89);
+
+    int capacityOfVector = myVector.capacity();
+    cout << "The Current Capacity of my vector is " << capacityOfVector << endl;
+
+    myVector.shrink_to_fit();
+
+    cout << "The Capacity of my vector after shriking is " << myVector.capacity() << endl;
+
+    return 0;
+}
+
+Q23. Check if a vector’s size is equal to a specific number and print a message.
+
+Ans. #include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    vector<int> myVector{1, 2, 3, 8, 9};
+
+    cout << "This is your Vector :";
+    for (auto it : myVector)
+        cout << it << " ";
+
+    cout << "\n";
+
+    int n;
+    cout << "Enter the Size : ";
+    cin >> n;
+
+    if (n == myVector.size())
+    {
+        cout << "You have Entered Right Size of Vector";
+    }
+    else
+    {
+        cout << "Sorry You Have Entered Wrong Size of My Vector.";
+    }
+
+    return 0;
+}
+
+Q24. Determine if the vector is at its maximum size using max_size().
+
+Ans. #include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    vector<int> myVector;
+    long max_Size_of_vector = myVector.max_size();
+    int size_of_my_vector = myVector.size();
+
+    if (size_of_my_vector <= max_Size_of_vector)
+    {
+        cout << "Vector is in Max Size Limit of Your Vector.";
+    }
+    else
+    {
+        cout << "Vector is exceed Max Size Limit of Your Vector.";
+    }
+    return 0;
+}
+
+Q25. Resize a vector of doubles to hold 15 elements and initialize them with 0.0.
+
+Ans. #include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    vector<double> myVector(15, 0.0);
+
+    for (auto it : myVector)
+        cout << it << " ";
+    return 0;
+}
